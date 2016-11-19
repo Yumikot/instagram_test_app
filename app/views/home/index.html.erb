@@ -1,0 +1,5 @@
+<h1>sample app yumiko</h1>
+<% @medias.each do |media| %>
+    <img src='<%= media.images.low_resolution.url %>'>
+    <p><%= Time.at(media.created_time.to_i) %></p>
+<% end %>
