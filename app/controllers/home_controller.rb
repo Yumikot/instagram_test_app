@@ -5,6 +5,3 @@ class HomeController < ApplicationController
     @medias = client.user_recent_media
   end
 end  
-
-
-
