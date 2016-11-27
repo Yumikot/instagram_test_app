@@ -1,2 +1,8 @@
 <h1>InstagramTestApp</h1>
 <p>My favorite pictures!</p>
+<% if logged_in? %>
+  <h2><%= "ユーザー名 : " +  current_user.name %></h2>
+  <% Array(@medias).each do |media| %>
+  	<img src='<%= media.images.low_resolution.url %>'>
+  <% end %>
+<% end %>

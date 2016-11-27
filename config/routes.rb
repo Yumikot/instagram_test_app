@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root to: 'static_pages#home'
   
-  get    'signup', to: 'users#new'
-  get    'login' , to: 'sessions#new'
-  post   'login' , to: 'sessions#create'
+  get "/oauth/connect"  , to: 'sessions#connect' 
+  get "/oauth/callback"  , to: 'sessions#callback'
   delete 'logout', to: 'sessions#destroy'
+  
 
   resources :users
+  
 end
